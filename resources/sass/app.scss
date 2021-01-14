@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/solid";
+@import "~@fortawesome/fontawesome-free/scss/brands";
+@import "~bootstrap/scss/bootstrap";
+@import "~chosen-js/chosen";
+
+body {
+    font-family: 'Nunito';
+}
+.cursor-pointer {
+    cursor: pointer;
+}
+.inline-editable:not(textarea) {
+    white-space: pre-wrap;
+}
+textarea.inline-editable {
+    box-sizing: border-box;
+    background: transparent;
+    border: 0;
+    resize: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+textarea::-webkit-scrollbar {
+    width: 0;
+}
+.chosen-container {
+    font-size: 14px;
+    color: #212529;
+}
+.chosen-container-multi .chosen-choices::after {
+    font-family: "Font Awesome 5 Free";
+    color: #2125299e;
+    position: absolute;
+    right: 9px;
+    margin-top: 6px;
+    content: "\F078";
+    font-size: 12px;
+}
+.chosen-container-multi .chosen-choices {
+    border: 1px solid #ced4da;
+    display: block;
+    padding: 0.375rem 0.75rem;
+    padding-left: 0.5rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    appearance: none;
+    border-radius: 0.25rem;
+    box-shadow: none;
+    outline: none;
+    background-image: none;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.chosen-container-multi .chosen-choices:focus,
+.chosen-container-multi.chosen-container-active .chosen-choices {
+    color: #212529;
+    background-color: #fff;
+    border-color: #86b7fe;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+.chosen-container-multi .chosen-choices li.search-choice {
+    background-image: none;
+    background-color: #ced4da;
+}
+.chosen-container-multi .chosen-choices li.search-field input[type=text] {
+    color: #6c757d;
+    font-size: 14px;
+    font-weight: normal;
+}
+.chosen-container .chosen-drop {
+    z-index: 100000;
+}
+.chosen.is-invalid .chosen-container-multi .chosen-choices {
+    border: 1px solid #dc3545;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right calc(1.5em + 0.1875rem) center;
+    background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+}
+.chosen.is-invalid .chosen-container-multi .chosen-choices:focus,
+.chosen.is-invalid .chosen-container-multi.chosen-container-active .chosen-choices {
+    border-color: #dc3545;
+    box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25);
+}
+.chosen-container .chosen-results li.highlighted {
+    background-color: #0d6efd;
+    background-image: none;
+    color: #fff;
+}
